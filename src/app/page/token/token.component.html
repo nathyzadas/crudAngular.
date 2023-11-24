@@ -1,0 +1,12 @@
+<h2>Gerador de Toke</h2>
+<div>
+    <label for="usuario">usuario</label>
+    <input type="text" id="usuario" [(ngModel)]="usuario">
+</div>
+<button (click)="gerarToken()">Gerar Token</button>
+<div *ngIf="token">
+<p><strong>usuario</strong>{{token.usuario}}</p>
+<p><strong>Token</strong>{{token.token}}</p>
+<p><strong>Expiração</strong>{{token.expiracao | date: 'medium'}}</p>
+
+</div>

@@ -1,0 +1,17 @@
+<h1>Carrinho</h1>
+<ul>
+    <li *ngFor="let item of carrinho">
+        <img src="/assets/2.jpg" alt="{{item.nome}}" width="50" height="50"> 
+        <div>
+            <h1>bolo 5 </h1> <!-- Adicione esta linha para exibir o nome do produto -->
+            <h3>bolo de cobertura de chocolate </h3><!-- Adicione esta linha para exibir a descrição do produto -->
+            {{item.preco | currency : "BRL" }} - {{item.quantidade}}
+            <button (click)="aumentarQuantidade(item)">Aumentar quantidade</button>
+            <button (click)="removerItem(item)">Remover item</button>
+        </div>
+    </li>
+    <p>Valor Total: {{total() | currency : "BRL"}}</p>
+    <button (click)="adicionarItem()">Adicionar item</button>
+    <button (click)="limparCarrinho()" *ngIf="carrinho.length > 0">Limpar carrinho</button>
+</ul>
+

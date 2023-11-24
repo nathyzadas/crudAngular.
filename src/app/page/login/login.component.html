@@ -1,0 +1,35 @@
+<div id="prin">
+
+    <div id="form">
+
+        <div class="container">
+
+            <div class="divs">
+
+                <label for="email"> EMAIL </label> <br>
+                <input type="email" id="email" [(ngModel)]="email"> <br><br>
+
+                <label for="senha"> SENHA </label> <br>
+                <input type="password" id="senha" [(ngModel)]="senha"> <br><br>
+
+            </div>
+
+            <br><br>
+
+            <div class="btn">
+
+                <button (click)="login()"> ENTRAR </button> <br>
+
+            </div>
+
+
+                <p id="p1">Nao possui uma conta? <a routerLink="/cadastro">Registre-se</a></p>
+                <p *ngIf="msg">{{ msg }}</p>
+            
+            
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,51 @@
+<!-- login.component.html ou equivalente -->
+<div class="header">
+<div class="login-container">
+    <form class="login-form" #f="ngForm" (ngSubmit)="enviarForm(f)">
+      <img src="assets/4.jpg" alt="Logo"> <!-- Substitua 'logo.jpg' com o caminho da sua imagem de logo -->
+      <label for="nome">Cake&More</label>
+      <input type="text" id="nome" name="nome" [(ngModel)]="dados.nome">
+  
+      <label for="descricao">Descrição</label>
+      <input type="text" id="descricao" name="descricao" [(ngModel)]="dados.descricao">
+  
+      <label for="valor">Valor</label>
+      <input type="number" id="valor" name="valor" [(ngModel)]="dados.valor">
+  
+      <label for="quantidade">Quantidade</label>
+      <input type="number" id="quantidade" name="quantidade" [(ngModel)]="dados.quantidade">
+  
+      <button type="submit">Entrar</button>
+    </form>
+    
+  </div>
+  <div class="footer">
+    <p>&copy; 2023 Cake&More. Todos os direitos reservados.</p>
+    
+    <!-- Links de mídia social (substitua pelos seus próprios links ou remova conforme necessário) -->
+    <div class="social-icons">
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <!-- Adicione mais ícones conforme necessário -->
+    </div>
+  </div>
+</div>
+
+  
+<!--<form [formGroup]="registrar" #f="ngForm" (ngSubmit)="enviarForm()">
+    <div>
+
+   <label for="nome">Nome</label>
+   <input type="text" id="nome" name="nome" [(ngModel)]="dados.nome">
+
+   <label for="idade">Idade</label>
+   <input type="number" id="idade" name="idade" [(ngModel)]="dados.idade">
+
+   <label for="email">Email</label>
+   <input type="email" id="email" name="email" [(ngModel)]="dados.email">
+
+    </div>
+    <button type="submit">Enviar</button>
+
+</form>-->

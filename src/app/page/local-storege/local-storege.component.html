@@ -1,0 +1,14 @@
+<h1>LocalStorege</h1>
+
+<div>
+    <label >Chave:</label>
+    <input [(ngModel)]="chave">
+</div>
+<div>
+    <label >Valor:</label>
+    <input [(ngModel)]="valor">
+</div>
+
+<button (click)="setItem()">Definir Item</button>
+<button (click)="getItem()">Obter Item</button>
+<button (click)="removeItem()">Remover Item</button>

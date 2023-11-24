@@ -1,0 +1,60 @@
+<!-- app.component.html -->
+<div class="header">
+<div class="admin-container">
+    <div class="admin-sidebar">
+      <div class="sidebar-header">
+        <img src="/assets/4.jpg" alt="Cupcake Icon" id="img">
+        <span>Cake&More</span>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a [routerLink]="'/novo'">Adicionar Novo</a></li>
+        <li><a [routerLink]="'/listar'">Listar Produtos</a></li>
+        <li><button (click)="sair()">sair</button></li>
+        <!-- Adicione mais itens de menu conforme necessário -->
+      </ul>
+    </div>
+  
+    <div class="admin-content">
+      <h2>Listagem de Produtos</h2>
+  
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Quantidade</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let pessoa of pessoas">
+          <tr>
+            <td>{{ pessoa.id }}</td>
+            <td>{{ pessoa.nome }}</td>
+            <td>{{ pessoa.descricao }}</td>
+            <td>{{ pessoa.valor }}</td>
+            <td>{{ pessoa.quantidade }}</td>
+            <td>
+              <button class="btn-update" [routerLink]="'/atualizar/' + pessoa?.id">Atualizar</button>
+              <button class="btn-delete" (click)="excluir(pessoa.id)">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br>
+</div>
+  <div class="footer">
+    <p>&copy; 2023 Cake&More. Todos os direitos reservados.</p>
+    
+    <!-- Links de mídia social (substitua pelos seus próprios links ou remova conforme necessário) -->
+    <div class="social-icons">
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <!-- Adicione mais ícones conforme necessário -->
+    </div>
+  </div>
+

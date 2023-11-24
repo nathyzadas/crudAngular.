@@ -1,0 +1,30 @@
+<div id="prin">
+
+    <div id="form">
+
+        <div class="container">
+
+            <h1> Registre-se </h1>
+            
+            <div class="divs">
+
+                <label for="email"> EMAIL </label>
+                <input type="email" id="email" [(ngModel)]="email">
+
+            </div>
+
+            <div class="divs">
+
+                <label for="senha"> SENHA </label>
+                <input type="password" id="senha" [(ngModel)]="senha">
+
+            </div>
+
+            <button (click)="registrar()"> CADASTRAR </button>
+            <p *ngIf="msg">{{ msg }}</p>
+
+        </div>
+
+    </div>
+
+</div>
